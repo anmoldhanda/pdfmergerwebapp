@@ -5,8 +5,9 @@ const path = require("path");
 const { mergepdfs } = require("./merge");
 const app = express();
 app.use("/static", express.static("public"));
-const port = 9000;
+const port = 1000;
 
+// always change the port number to something else because the port numbers in past can't be used anymore due to a bug which isn't solved still now currently used ports are 3000, 9000, 1000 if u use a different port except the used ports then the app will work otherwise it won't work
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, `templates/index.html`));
 });
